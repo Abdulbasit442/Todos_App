@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Todo App</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="app-header">
+            <h1>Todo Manager</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+    <main class="app-main">
+        <div class="todo-controls">
+            <form id="todo-form" class="todo-form">
+                <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task..." aria-label="Add a new task" required>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-plus"></i> Add Task</button>
+            </form>
+            <div class="todo-filters">
+                <button class="btn filter-btn active" data-filter="all">All</button>
+                <button class="btn filter-btn" data-filter="active">Active</button>
+                <button class="btn filter-btn" data-filter="completed">Completed</button>
+            </div>
+        </div>
+        <div class="todo-stats">
+            <span id="remaining-count">0</span> tasks remaining
+            <button id="clear-completed" class="btn btn-text">Clear completed</button>
+        </div><ul id="todo-list" class="todo-list" aria-live="polite">
+    <!-- Todos will be added here dynamically -->
+        </ul>
+    </main>
+    <footer class="app-footer">
+    <p>© 2023 Professional Todo App | Drag and drop to reorder list</p>
+    </footer>
+    </div>
+<script src="main.js"></script>
+</body>
+</html>
